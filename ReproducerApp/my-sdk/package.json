@@ -1,0 +1,16 @@
+{
+  "name": "sdk",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "bundle-sdk": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/sdk.android.bundle --assets-dest android/app/src/main/res --sourcemap-output map/sdk.android.bundle.map --reset-cache --verbose",
+    "publish-local-sdk": "cd android && ./gradlew clean assembleDebug && ./gradlew publishToMavenLocal"
+  },
+  "devDependencies": {
+    "react-native": "../node_modules/react-native"
+  }
+}

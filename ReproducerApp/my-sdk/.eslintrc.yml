@@ -1,0 +1,30 @@
+env:
+  browser: true
+  react-native/react-native: true
+extends: 'eslint:recommended'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 2018
+plugins:
+  - react
+  - react-native
+rules:
+  indent:
+    - error
+    - tab
+    - react-native/no-unused-styles: 2
+    - react-native/split-platform-components: 2
+    - react-native/no-inline-styles: 2
+    - react-native/no-color-literals: 2
+    - react-native/no-raw-text: 2
+
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
